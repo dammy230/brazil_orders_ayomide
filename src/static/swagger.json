@@ -1,0 +1,381 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Brazil_Order_ayomide API",
+    "description": "This is a basic API used in the  extraction, transformation and loading orders from a Brazil e-com platform.",
+    "version": "1"
+  },
+  "servers": [
+    {
+      "url": "/api",
+      "description": "API-Development server"
+    }
+  ],
+  "paths": {
+    "/load_sellers_data": {
+      "post": {
+        "tags": [
+          "Load Data"
+        ],
+        "summary": "Load sellers data from a CSV file",
+        "description": "Load sellers data from a CSV file and store it in a database",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Data loaded successfully"
+          }
+        }
+      }
+    },
+      "/load_customers_data": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Customers data from a CSV file",
+          "description": "Load the Customers data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_sellers": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Sellers data from the database",
+          "description": "Retrieve the top 5 Sellers data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_customers": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Customers data from the database",
+          "description": "Retrieve the top 5 Customers data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_orders_data": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Orders data from a CSV file",
+          "description": "Load the Orders data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_orders": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Orders data from the database",
+          "description": "Retrieve the top 5 Orders data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_order_items_data": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Order Items data from a CSV file",
+          "description": "Load the Order Items data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_order_items": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Order Items data from the database",
+          "description": "Retrieve the top 5 Order Items data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_order_payments_data": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Order Payments data from a CSV file",
+          "description": "Load the Order Payments data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_order_payments": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Order Payments data from the database",
+          "description": "Retrieve the top 5 Order Payments data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_products_data": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Products data from a CSV file",
+          "description": "Load the Products data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_products": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Products data from the database",
+          "description": "Retrieve the top 5 Products data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_products_category": {
+        "post": {
+          "tags": [
+            "Load Data"
+          ],
+          "summary": "Load the Products Category data from a CSV file",
+          "description": "Load the Products Category data from a CSV file and store it in a database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_products_category": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Products Category data from the database",
+          "description": "Retrieve the top 5 Products Category data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/process_fact_table": {
+        "post": {
+          "tags": [
+            "Process Data"
+          ],
+          "summary": "Processing the Fact Table",
+          "description": "Process the Fact Table by joining the Customers, Orders, Order Items, Order Payments, Products and Products Category data on their common fields and store it in a database",
+          "responses": {
+            "200": {
+              "description": "Data processed successfully"
+            }
+          }
+        }
+      },
+      "/get_fact_table": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the Fact Table data from the database",
+          "description": "Retrieve the top 5 Fact Table data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/load_top_sellers": {
+        "post": {
+          "tags": [
+            "Process Data"
+          ],
+          "summary": "Analyze the fact table and extract the top sellers",
+          "description": "Analyze the fact table and extract the top sellers based on the total sales amount and store it in a database",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      },
+      "/get_top_sellers": {
+        "get": {
+          "tags": [
+            "Retrieve Data"
+          ],
+          "summary": "Retrieve the top sellers data from the database",
+          "description": "Retrieve the top 5 sellers data from the database and return it as a JSON response",
+          "responses": {
+            "200": {
+              "description": "Data loaded successfully"
+            }
+          }
+        }
+      }
+  }
+}
+

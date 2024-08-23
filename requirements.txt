@@ -1,0 +1,13 @@
+polars-lts-cpu
+duckdb==0.8.1
+pandas==1.3.3
+numpy==1.21.5
+sqlalchemy==1.4.25
+duckdb-engine
+pyarrow>=8.0.0 
+xlsxwriter
+xlsx2csv
+fastexcel
+flask
+flask_swagger_ui
+werkzeug
